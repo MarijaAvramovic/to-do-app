@@ -1,5 +1,5 @@
-
-const list = document.querySelector(".task-list");
+import { reset } from "./resetls.js";
+export const list = document.querySelector(".task-list");
 
 const myForm = document.querySelector("#myForm");
 console.log(myForm);
@@ -8,7 +8,7 @@ const newList = document.querySelector('[data-new-list]');
 const listArray =  JSON.parse(localStorage.getItem('arrayList') || '[]')
  console.log(listArray);
 
-function displayList() {
+export function displayList() {
     list.innerHTML = '';
     for (let i = 0; i < listArray.length; i++) {
         
