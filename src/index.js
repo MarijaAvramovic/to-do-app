@@ -5,8 +5,8 @@ const myForm = document.querySelector("#myForm");
 console.log(myForm);
 const newList = document.querySelector('[data-new-list]');
 
-const listArray = [];
- 
+const listArray =  JSON.parse(localStorage.getItem('arrayList') || '[]')
+ console.log(listArray);
 
 function displayList() {
     list.innerHTML = '';
@@ -18,6 +18,7 @@ function displayList() {
 
         list.appendChild(listItem);
     }
+
 }
 
  displayList();
@@ -40,6 +41,7 @@ myForm.addEventListener('submit', function(event) {
         newList.value = '';
         newList.focus(); 
     }
+    localStorage.setItem('arrayList', JSON.stringify(listArray));
 });
 
 
