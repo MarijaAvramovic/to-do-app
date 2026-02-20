@@ -1,15 +1,36 @@
-< !DOCTYPE html>
-  <html lang="en">
-
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      <%= htmlWebpackPlugin.options.title %>
-    </title>
-  </head>
+    <title>To Do</title>
+</head>
+<body>
+    <div class="title">
+        <h1 class="title">Stuff I need to do</h1>
+    </div>
+     
 
-  <body>
-  </body>
+    <div class="all-tasks">
+        <h2 class="task-list-tittle">My list</h2>
+        <ul class="task-list">
+            <!-- <li class="active-list">YT</li>
+            <li>Work</li>
+            <li>Grocery</li> -->
+        </ul>
 
-  </html>
+        <form action="" id="myForm">
+            <input 
+            type="text"
+            class="new list"
+            placeholder="new list name"
+            aria-label="new list name"
+            data-new-list
+            >
+            <button class="btn create" aria-label="create new list">+</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>
