@@ -1,5 +1,5 @@
-import js from '@eslint/js';
-import globals from 'globals';
+import js from "@eslint/js";
+import globals from "globals";
 
 export default [
   js.configs.recommended,
@@ -7,22 +7,22 @@ export default [
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.node
+        ...globals.node,
       },
       ecmaVersion: 2022,
-      sourceType: 'module'
+      sourceType: "module",
     },
     rules: {
-      'eqeqeq': 'error',
-      'comma-dangle': ['error', 'never'],
-      'consistent-return': 'error',
-      'no-unused-vars': 'warn',
-      'quotes': ['error', 'single'],
-      'semi': ['error', 'always'],
-      'no-console': 'warn'
-    }
+      eqeqeq: "error",
+      "comma-dangle": ["error", "never"],
+      "consistent-return": "error",
+      "no-unused-vars": "warn",
+      quotes: ["error", "single"],
+      semi: ["error", "always"],
+      "no-console": "warn",
+    },
   },
   {
-    ignores: ['dist/**', 'node_modules/**', 'webpack.*.js']
-  }
+    ignores: ["dist/**", "node_modules/**", "webpack.*.js"],
+  },
 ];
