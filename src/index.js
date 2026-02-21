@@ -1,17 +1,17 @@
-import { reset } from "./resetls.js";
-export const list = document.querySelector(".task-list");
+import { reset } from './resetls.js';
+export const list = document.querySelector('.task-list');
 
-const myForm = document.querySelector("#myForm");
+const myForm = document.querySelector('#myForm');
 console.log(myForm);
-const newList = document.querySelector("[data-new-list]");
+const newList = document.querySelector('[data-new-list]');
 
-const listArray = JSON.parse(localStorage.getItem("arrayList") || "[]");
+const listArray = JSON.parse(localStorage.getItem('arrayList') || '[]');
 console.log(listArray);
 
 export function displayList() {
-  list.innerHTML = "";
+  list.innerHTML = '';
   for (let i = 0; i < listArray.length; i++) {
-    const listItem = document.createElement("li");
+    const listItem = document.createElement('li');
 
     listItem.textContent = listArray[i];
 
@@ -21,7 +21,7 @@ export function displayList() {
 
 displayList();
 
-myForm.addEventListener("submit", function (event) {
+myForm.addEventListener('submit', function (event) {
   // 1. Prevent the default form submission (which would reload the page)
   event.preventDefault();
 
@@ -34,8 +34,8 @@ myForm.addEventListener("submit", function (event) {
 
     // 4. (Optional) Update the display and clear the input field
     displayList();
-    newList.value = "";
+    newList.value = '';
     newList.focus();
   }
-  localStorage.setItem("arrayList", JSON.stringify(listArray));
+  localStorage.setItem('arrayList', JSON.stringify(listArray));
 });

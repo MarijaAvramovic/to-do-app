@@ -1,7 +1,7 @@
-import { list } from "./index.js";
-const clrBtn = document.querySelector("#clr");
+import { list } from './index.js';
+const clrBtn = document.querySelector('#clr');
 
-export const reset = clrBtn.addEventListener("click", function () {
-  localStorage.removeItem("arrayList");
-  list.innerHTML = "";
+export const reset = clrBtn.addEventListener('click', function () {
+  localStorage.removeItem('arrayList');
+  list.innerHTML = '';
 });
